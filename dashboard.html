@@ -125,6 +125,37 @@ body {
     margin-bottom: 20px;
   }
 }
+/* Mobile friendly */
+@media (max-width: 700px) {
+  body {
+    height: auto;           /* allow content to expand naturally */
+    padding: 40px 20px;     /* spacing from top/bottom */
+    justify-content: flex-start; /* top-align content instead of centering */
+  }
+
+  .container-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gloria-hallelujah-regular h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .gloria-hallelujah-regular p {
+    font-size: 1em;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .card img {
+    width: 150px;
+    height: 180px;
+    padding: 15px;
+  }
+}
 
   </style>
 </head>

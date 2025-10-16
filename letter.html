@@ -108,6 +108,43 @@
       transform: scale(1.1);
       color: #fff;
     }
+
+    /* Mobile Responsive */
+@media (max-width: 700px) {
+  body {
+    height: auto;       /* allow content to flow naturally */
+    padding: 20px 15px; /* reduce padding for small screens */
+    justify-content: flex-start; /* top-align content */
+  }
+
+  .gloria-hallelujah-regular h1,
+  .gloria-hallelujah-regular h2 {
+    font-size: 1.2em;   /* smaller headings */
+    line-height: 1.4;
+    width: 100%;
+    text-align: center; /* center on mobile for readability */
+  }
+
+  .gloria-hallelujah-regular p {
+    font-size: 1em;     /* smaller paragraphs */
+    line-height: 1.5;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .broken-line {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 180px;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
   </style>
 </head>
 <body>
