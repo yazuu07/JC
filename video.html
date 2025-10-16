@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Container</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-2301.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 120vh;
+  margin: 0;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 2s;
+}
+
+    .video-container {
+      position: relative;
+      width: 80%;            /* 🔥 wide */
+      max-width: 960px;
+      aspect-ratio: 16 / 9;  /* ensures it's wider than tall */
+      background: white;
+      border: 8px solid #000000;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .title {
+      position: absolute;
+      top: -60px;
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #b90000;
+      text-align: center;
+      width: 100%;
+    }
+    .gloria-hallelujah-regular h1{
+      font-family: "Gloria Hallelujah", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: #b90000;
+      font-size: 3em;
+      line-height: 0.4;
+      animation: fadeInUp 2s ease forwards;
+    }
+    .button {
+        text-align: center;
+  padding: 10px 20px;
+    border: 3px solid #b90000;
+    border-radius: 10px;
+    background-color: #b90000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 300px;
+}
+button {
+  padding: 10px 20px;
+    border: 3px solid #b90000;
+    border-radius: 30px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 200px;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #b90000;
+  color: #fff;
+}
+
+.broken-line {
+    margin-top: 40px;
+  border: none;
+  border-top: 4px dashed #b90000; /* color and thickness */
+  width: 90%;                  /* adjust width */
+  margin: 20px auto;           /* center it */
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0.7;                /* optional transparency */
+}
+@keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+    <div class="gloria-hallelujah-regular">
+        <h1>This song reminds me of you ( > u < )</h1>
+    </div><br><br>
+  <div class="video-container">
+    
+    <div class="title">🎬 My Favorite YouTube Video</div>
+    <!-- Replace the video ID below with any YouTube video -->
+    <iframe 
+    src="https://www.youtube.com/embed/f7s_kTSruoY?list=RDf7s_kTSruoY&start_radio=1" 
+    title="YouTube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+<br><br>
+  </div>
+  <div class="gloria-hallelujah-regular"><br><br>
+    <h1 style="color: #000000;">The Ridleys - Someday</h1>
+</div><br><br><br><br>
+<div class="button">secret message: 3:07 - 3:17</div><br><br><br>
+<hr class="broken-line">
+<div class="gloria-hallelujah-regular">
+    <h1 style="margin-top: 1em;">Song about you</h1><br><br>
+  </div><br>
+  <a href="dashboard.html"><button>RETURN</button></a>
+</body>
+</html>

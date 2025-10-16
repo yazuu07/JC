@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickable Image Containers</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body {
+  background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-2301.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+/* ✨ Heading fade-in */
+.gloria-hallelujah-regular h1 {
+  color: #b90000;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.gloria-hallelujah-regular p {
+  color: #b90000;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* ✨ Container grid */
+.container-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  width: 90%;
+}
+
+/* ✨ Clickable cards */
+.card {
+  display: flex;
+  justify-content: center;  /* centers image horizontally */
+  align-items: center;      /* centers image vertically */
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  border: 6px solid #b90000;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+
+/* Sequential fade-in timing */
+.card:nth-child(1) { animation-delay: 0.4s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.8s; }
+.card:nth-child(4) { animation-delay: 1s; }
+
+.card img {
+  display:flex;
+  justify-items: center;
+  width: 200px;
+  height: 240px;
+  display: block;
+  transition: transform 0.4s ease;
+  padding: 20px 20px;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ✨ Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile friendly */
+@media (max-width: 700px) {
+  .container-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .gloria-hallelujah-regular h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div class="gloria-hallelujah-regular">
+        <h1>THESE ARE FOR YOU!</h1>
+        <p>I hope you like it, I love you!</p>
+    </div>
+
+  <div class="container-wrapper">
+    <a href="photo.html" class="card">
+      <img src="https://cdn-icons-png.flaticon.com/256/7779/7779866.png" alt="Gift One">
+    </a>
+
+    <a href="rose.html" class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3708/3708773.png" alt="Gift Two">
+    </a>
+
+    <a href="video.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREuqVzo_4qted3pTqIGJd6aNnN4LY3mi5h8A&s" alt="Gift Three">
+    </a>
+
+    <a href="letter.html" class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/693/693329.png" alt="Gift Four">
+    </a>
+  </div>
+
+</body>
+</html>

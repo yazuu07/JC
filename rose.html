@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Image Box</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 110vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      position: relative;
+      gap: 20px;
+    }
+
+    .container {
+      position: relative;
+      border: 10px solid rgb(137, 5, 5);
+      width: 400px;
+      height: 600px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: transform 0.3s ease;
+      z-index: 1;
+      animation: fadeInUp 1s ease forwards;
+      overflow: visible;
+    }
+
+    .container img {
+      width: auto;
+      height: 370px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .gloria-hallelujah-regular h2 {
+      font-family: "Gloria Hallelujah", cursive;
+      font-weight: 900;
+      color: rgb(189, 5, 5);
+      font-size: 1.9em;
+      line-height: 0.4;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    .gloria-hallelujah-regular h1 {
+      font-family: "Gloria Hallelujah", cursive;
+      margin-top: 1em;
+      font-weight: 900;
+      color: rgb(189, 5, 5);
+      font-size: 4em;
+      line-height: 0.4;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .gloria-hallelujah-regular p {
+      font-family: "Gloria Hallelujah", cursive;
+      font-weight: 400;
+      color: rgb(189, 5, 5);
+      font-size: 1em;
+      line-height: 0.4;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    /* Floating text boxes */
+    .float-text {
+      position: absolute;
+      background: white;
+      border: 4px solid rgb(189, 5, 5);
+      border-radius: 26px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      font-family: "Gloria Hallelujah", cursive;
+      font-size: 0.9em;
+      color: rgb(189, 5, 5);
+      z-index: 5;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    /* Text box placements (with intersections) */
+    .float-text.left-top { width: 400px; top: -25px; left: -320px; transform: rotate(-5deg); }
+    .float-text.right-top { width: 400px; top: 40px; right: -320px; transform: rotate(6deg); }
+    .float-text.left-mid { width: 400px; top: 220px; left: -330px; transform: rotate(4deg); }
+    .float-text.right-mid { width: 400px; top: 280px; right: -320px; transform: rotate(-6deg); }
+    .float-text.left-bottom { width: 400px; bottom: 100px; left: -320px; transform: rotate(3deg); }
+    .float-text.right-bottom { width: 400px; bottom: -10px; right: -320px; transform: rotate(-5deg); }
+    .float-text.top-center { width: 400px; top: -90px; left: 50%; transform: translateX(-50%) rotate(2deg); }
+    .float-text.bottom-center { width: 400px; bottom: -60px; left: 50%; transform: translateX(-50%) rotate(-2deg); }
+
+    /* Broken dashed line */
+    .broken-line {
+      border-top: 4px dashed #b90000;
+      width: 90%;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    
+button {
+  padding: 10px 20px;
+    border: 3px solid #b90000;
+    border-radius: 30px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 200px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #b90000;
+  color: #fff;
+}
+
+  </style>
+
+  
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/4139/4139440.png" alt="Sample">
+    <br><br><br><br>
+    <div class="gloria-hallelujah-regular">
+      <h2><u style="text-decoration-color: rgb(189, 5, 5);">LILY</u></h2><br><br>
+      <p>Flower that symbolizes you</p>
+    </div>
+
+    <!-- Floating text boxes -->
+    <div class="float-text left-top">Love called… I said your name.</div>
+    <div class="float-text right-top">My favorite place is next to you.</div>
+    <div class="float-text left-mid">You’re my 24/7 thought.</div>
+    <div class="float-text right-mid">You’re my favorite notification.</div>
+    <div class="float-text left-bottom">Even Google can’t find someone like you.</div>
+    <div class="float-text right-bottom">You’re the plot twist I prayed for.</div>
+   
+  </div>
+
+  <!-- Broken dashed line below -->
+  <hr class="broken-line">
+  <div class="gloria-hallelujah-regular">
+    <h1>Virtual Flower</h1><br>
+  </div>
+  <a href="dashboard.html"><button>RETURN</button></a>
+</body>
+</html>

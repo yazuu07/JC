@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scattered Photobooth</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-2301.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+  .container {
+  min-height: 100vh;  /* allow it to grow, not trap others */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+  .card {
+    position: absolute;
+    width: 170px;
+    height: 230px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 6px solid #b90000;
+    background-color: #b90000;
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+  .gloria-hallelujah-regular {
+    margin-top: 1em;
+      font-family: "Gloria Hallelujah", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: #b90000;
+      font-size: 1.7em;
+      line-height: 0.4;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+  /* Organized scattered positions */
+  .card:nth-child(1)  { top: 4%; left: 10%; transform: rotate(-5deg); }
+  .card:nth-child(2)  { top: 4%; left: 26%; transform: rotate(4deg); }
+  .card:nth-child(3)  { top: 4%; left: 42%; transform: rotate(-4deg); }
+  .card:nth-child(4)  { top: 2%; left: 58%; transform: rotate(5deg); }
+  .card:nth-child(5)  { top: 4%; left: 74%; transform: rotate(-3deg); }
+  .card:nth-child(6)  { top: 4%; left: 90%; transform: rotate(4deg); }
+  
+  .card:nth-child(7)  { top: 33%; left: 4%; transform: rotate(5deg); }
+  .card:nth-child(8)  { top: 35%; left: 24%; transform: rotate(-4deg); }
+  .card:nth-child(9)  { top: 33%; left: 40%; transform: rotate(4deg); }
+  .card:nth-child(10) { top: 37%; left: 56%; transform: rotate(-5deg); }
+  .card:nth-child(11) { top: 33%; left: 72%; transform: rotate(3deg); }
+  .card:nth-child(12) { top: 35%; left: 90%; transform: rotate(-4deg); }
+  
+  .card:nth-child(13) { top: 66%; left: 8%; transform: rotate(-4deg); }
+  .card:nth-child(14) { top: 64%; left: 26%; transform: rotate(5deg); }
+  .card:nth-child(15) { top: 66%; left: 48%; transform: rotate(-3deg); }
+  .card:nth-child(16) { top: 62%; left: 68%; transform: rotate(4deg); }
+  .card:nth-child(17) { top: 68%; left: 90%; transform: rotate(-5deg); }
+
+  /* Hover effect - pop out and straighten */
+  .card:hover {
+    transform: rotate(0deg) scale(1.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+
+  /* Fade-in animation */
+  .card {
+    opacity: 0;
+    animation: popIn 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+  .card:nth-child(5) { animation-delay: 0.5s; }
+  .card:nth-child(6) { animation-delay: 0.6s; }
+  .card:nth-child(7) { animation-delay: 0.2s; }
+  .card:nth-child(8) { animation-delay: 0.3s; }
+  .card:nth-child(9) { animation-delay: 0.4s; }
+  .card:nth-child(10) { animation-delay: 0.5s; }
+  .card:nth-child(11) { animation-delay: 0.6s; }
+  .card:nth-child(12) { animation-delay: 0.7s; }
+  .card:nth-child(13) { animation-delay: 0.3s; }
+  .card:nth-child(14) { animation-delay: 0.4s; }
+  .card:nth-child(15) { animation-delay: 0.5s; }
+  .card:nth-child(16) { animation-delay: 0.6s; }
+  .card:nth-child(17) { animation-delay: 0.7s; }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0) rotate(-20deg);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .broken-line {
+    margin-top: 40px;
+  border: none;
+  border-top: 4px dashed #b90000; /* color and thickness */
+  width: 90%;                  /* adjust width */
+  margin: 20px auto;           /* center it */
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0.7;                /* optional transparency */
+}
+
+@keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+button {
+  padding: 10px 20px;
+    border: 3px solid #b90000;
+    border-radius: 30px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 200px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #b90000;
+  color: #fff;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card"><img src="images/04d674ca-1a12-4a38-8b41-498d7c9dc33d.jpg" alt=""></div>
+    <div class="card"><img src="images/e8881589-dddf-4281-9ed1-84a87579b14f.jpg" alt=""></div>
+    <div class="card"><img src="images/e8881589-dddf-4281-9ed1-84a87579b14f.jpg" alt=""></div>
+    <div class="card"><img src="images/11050d6a-46a5-4d2d-aecc-bb5cddc8866c.jpg" alt=""></div>
+    <div class="card"><img src="images/dfd190e5-72e4-4741-941c-894e3aad6e9c.jpg" alt=""></div>
+    <div class="card"><img src="images/295b4059-3366-421c-83e1-fcea9e474add.jpg" alt=""></div>
+    <div class="card"><img src="images/d5ef4d86-c111-43f9-9321-3a3584b23eae.jpg" alt=""></div>
+    <div class="card"><img src="images/2c5cd02f-2ec7-4f95-a96b-2d963d2d541a.jpg" alt=""></div>
+    <div class="card"><img src="images/d3fa09cf-9e7b-46ce-8d62-385aa245a107.jpg" alt=""></div>
+    <div class="card"><img src="images/437ea3ca-6848-4003-85a8-a4375d9e72ed.jpg" alt=""></div>
+    <div class="card"><img src="images/d0ae6140-01fa-4eea-86ec-786796be953f.jpg" alt=""></div>
+    <div class="card"><img src="images/4d8040f7-7ce7-4b46-a7b6-92471dbfe9a6.jpg" alt=""></div>
+    <div class="card"><img src="images/c33f866e-e652-46e9-b181-12b04a1dab23.jpg" alt=""></div>
+    <div class="card"><img src="images/5ef15cac-d8b9-461b-be75-e280a9b04146.jpg" alt=""></div>
+    <div class="card"><img src="images/b4a68d03-d928-4264-8e01-21040c6a44bd.jpg" alt=""></div>
+    <div class="card"><img src="images/62dbc194-3572-4a41-8285-8c9482547d99.jpg" alt=""></div>
+    <div class="card"><img src="images/ac8212f2-e83a-47f9-96c9-f83fe060b958.jpg" alt=""></div>
+  </div><br><br><br><br><br><br>
+  <hr class="broken-line">
+
+  <div class="gloria-hallelujah-regular">
+    <h1>Captured Memories</h1><br><br><br>
+  </div>
+  <a href="dashboard.html"><button>RETURN</button></a>
+</body>
+</html>

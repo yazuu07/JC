@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Gloria+Hallelujah&family=Mansalva&family=Michroma&family=Oswald:wght@200..700&family=Play:wght@400;700&display=swap');
+
+:root {
+  --color: #000;
+  background-color: #a8a7a7;
+}
+
+body {
+  background-image: url('https://img.freepik.com/free-photo/white-paper-texture_1194-2301.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gloria-hallelujah-regular {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color);
+  font-size: 2em;
+  line-height: 0.4;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.home img {
+  width: 140px;
+  height: 140px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.buttons {
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 3px solid rgb(189, 5, 5);
+  border-radius: 30px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.buttons button:hover {
+  background-color: rgb(189, 5, 5);
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* ✨ Fade Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  </style>
+</head>
+<body>
+    <section class="home">
+        <div class="gloria-hallelujah-regular">
+        <img src="https://ugokawaii.com/wp-content/uploads/2022/12/crying.gif" alt="crying">
+          <h1 class="second" style="color: rgb(189, 5, 5)">I promise you'll like it</h1>
+        </div>
+        <div class="buttons">
+        <a href="index.html"><button>TRY AGAIN</button></a>
+    </div>
+      </section>
+</body>
+</html>
