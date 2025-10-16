@@ -133,6 +133,67 @@ button:hover {
   background-color: #b90000;
   color: #fff;
 }
+/* Mobile Responsive */
+@media (max-width: 700px) {
+  body {
+    height: auto;       /* allow content to expand */
+    padding: 20px 10px;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    padding-bottom: 100px; /* space for floating texts */
+  }
+
+  .container img {
+    height: 250px;   /* smaller image */
+    width: auto;
+  }
+
+  .gloria-hallelujah-regular h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .gloria-hallelujah-regular h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .gloria-hallelujah-regular p {
+    font-size: 0.9em;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  /* Floating texts reposition */
+  .float-text {
+    width: 80%;
+    font-size: 0.8em;
+    left: 50% !important;
+    transform: translateX(-50%) rotate(0deg) !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 5px 0;
+    position: relative;
+  }
+
+  .broken-line {
+    width: 95%;
+  }
+
+  button {
+    width: 100%;
+    max-width: 180px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
 
   </style>
 
